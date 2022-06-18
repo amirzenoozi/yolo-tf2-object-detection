@@ -1,7 +1,5 @@
-# YOLO Object Detection ⛔
+# YOLO Object Detection 🏷️
 We Use Pretrained YOLO Model to Detect Objects
-
-
 
 ## Requierments 📦
 
