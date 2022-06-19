@@ -50,6 +50,7 @@ Thumbs.db
 /*/__pycache__
 *.jpg
 *.jpeg
+*.mp4
 .venv
 /checkpoints
 /images
