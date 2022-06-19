@@ -7,14 +7,14 @@ import tensorflow as tf
 def parse_args():
     desc = "Convert YOLO Weights To Checkpoints"
     parser = argparse.ArgumentParser(description=desc)
-    parser.add_argument('--weights', type=str, default='./models/yolov3.weights', help='Path To Weights File')
-    parser.add_argument('--output', type=str, default='./checkpoints/yolov3.tf', help='Path To Output')
+    parser.add_argument('--weights', type=str, default='./models/yolov3-coco.weights', help='Path To Weights File')
+    parser.add_argument('--output', type=str, default='./checkpoints/yolov3-coco.tf', help='Path To Output')
     parser.add_argument('--tiny', type=bool, default=False, help='yolov3 or yolov3-tiny')
     parser.add_argument('--classes', type=int, default=80, help='Number Of Classes In The Model')
 
     return parser.parse_args()
 
-def main(_argv):
+def main():
     args = parse_args()
     if args is None:
         exit()
