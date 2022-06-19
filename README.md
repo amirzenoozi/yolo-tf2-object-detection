@@ -18,11 +18,25 @@ pip install -r requirements.txt
 - python convert.py --weights ./models/yolov3-tiny.weights --output ./checkpoints/yolov3-tiny.tf --tiny True
 ```
 
-## Frame Extractor CLI Options 📋
+## Video Frame Extractor CLI Options 🎞️
 
 ```bash
 --frame     Frame Threshold     #default: 1800 (Every Minutes)
 --src       Video File PATH     #default: 'sample.mp4'
+```
+
+You Need to Use This Command:
+
+```bash
+python frame.py --frame FRAME_TH --src VIDEO_FILE
+```
+
+## Live Stream Frame Extractor CLI Options 📺
+
+```bash
+--frame     Frame Threshold             #default: 1800 (Every Minutes)
+--src       Video File PATH             #default: ''
+--dir       Save Frames Folder Name     #default: '' | (Auto-Generate UUID4)
 ```
 
 You Need to Use This Command:
@@ -57,10 +71,11 @@ python video.py --dir PATH_TO_FRAMES_DIR
 
 - [x] Detect Default COCO Classes 
 - [x] CLI
+- [x] Image Files
+- [x] Video Files
+- [x] Live Stream
 - [ ] Support I18N Classes
 - [ ] Telegram Bot
-- [x] Video Files
-- [ ] Dataset
 - [ ] Rest API
     - [ ] Image Support
     - [ ] Video Support
