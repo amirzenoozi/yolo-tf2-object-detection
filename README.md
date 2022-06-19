@@ -18,6 +18,19 @@ pip install -r requirements.txt
 - python convert.py --weights ./models/yolov3-tiny.weights --output ./checkpoints/yolov3-tiny.tf --tiny True
 ```
 
+## Frame Extractor CLI Options 📋
+
+```bash
+--frame     Frame Threshold     #default: 1800 (Every Minutes)
+--src       Video File PATH     #default: 'sample.mp4'
+```
+
+You Need to Use This Command:
+
+```bash
+python frame.py --frame FRAME_TH --src VIDEO_FILE
+```
+
 ## Object Detection 📋
 
 ```bash
@@ -33,9 +46,12 @@ pip install -r requirements.txt
 Then You Just Need To Run This:
 
 ```bash
-python main.py --image './data/sample.jpg'
-```
+# Image
+python main.py --image PATH_TO_IMAGE
 
+# Video
+python video.py --dir PATH_TO_FRAMES_DIR
+```
 
 ## Features ✨
 
@@ -43,7 +59,7 @@ python main.py --image './data/sample.jpg'
 - [x] CLI
 - [ ] Support I18N Classes
 - [ ] Telegram Bot
-- [ ] Video Files
+- [x] Video Files
 - [ ] Dataset
 - [ ] Rest API
     - [ ] Image Support
