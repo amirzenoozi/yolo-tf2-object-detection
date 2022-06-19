@@ -42,6 +42,10 @@ class Handler(FileSystemEventHandler):
         if event.is_directory:
             return None
 
+        # elif event.event_type == 'modified':
+        #     # Taken any action here when a file is modified.
+        #     print(f'Received modified event - {event.src_path}.')
+
         elif event.event_type == 'created':
             # Take any action here when a file is first created.
             print(f'Received created event - {event.src_path}.')
@@ -60,10 +64,6 @@ class Handler(FileSystemEventHandler):
             boxes, scores, classes, nums = yolo(img)
             for i in range(nums[0]):
                 print('\t{}, {}'.format(class_names[int(classes[0][i])], np.array(scores[0][i])))
-
-        # elif event.event_type == 'modified':
-        #     # Taken any action here when a file is modified.
-        #     print(f'Received modified event - {event.src_path}.')
 
 
 if __name__ == '__main__':

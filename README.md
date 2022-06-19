@@ -42,7 +42,13 @@ python frame.py --frame FRAME_TH --src VIDEO_FILE
 You Need to Use This Command:
 
 ```bash
-python frame.py --frame FRAME_TH --src VIDEO_FILE
+python live.py --frame FRAME_TH --src STREAM_LINK --dir FOLDER_NAME
+```
+
+if You want to proccess frames during extraction task, you just need to run:
+
+```bash
+python watcher.py --src FOLDER_NAME
 ```
 
 ## Object Detection 📋
